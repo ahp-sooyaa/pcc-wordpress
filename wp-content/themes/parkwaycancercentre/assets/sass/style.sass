@@ -1,0 +1,131 @@
+$white: #ffffff
+$gold-accent: #fdb813
+$primary-color: #005596
+$rotis-semibold-font: 'rotisSemiSansStdBold'
+@font-face 
+    font-family: "rotisSemiSansStdBold"
+    src: url('./fonts/RotisSemiSansStd65Bold.otf') format('opentype')
+
+body
+    margin: 0
+
+.font-rotis-semi-bold
+    font-family: $rotis-semibold-font
+.font-arial
+    font-family: 'Arial'
+    letter-spacing: 0.3px
+    line-height: 25.6px
+
+.page-content
+    padding-top: 30px
+    padding-bottom: 30px
+
+.nav-container
+    display: flex
+    justify-content: space-between
+    margin: auto
+    padding: 0 50px
+    .nav
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: end
+        .nav-top-header
+            display: flex
+            align-items: center
+            input
+                border: 0
+                border-radius: 20px
+                background: #f2f2f2
+                padding: 10px 20px
+                margin-left: 20px
+                &::placeholder
+                    color: #c2c2c2
+                    font-style: italic
+            .language-switcher-dropdown
+                position: relative
+                padding: 10px 0
+                .current-language
+                    display: flex
+                    align-items: center
+                    cursor: pointer
+                    line-height: 16px
+                    color: $primary-color 
+                ul.all-languages
+                    display: block
+                    position: absolute
+                    top: 20px
+                    left: 0
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
+                    border-radius: 5px
+                    border: 1px solid $gold-accent 
+                    padding: 0
+                    background-color: white
+                    overflow: hidden
+                    min-width: max-content
+                    z-index: 10
+                    > li
+                        padding: 10px 20px
+                        list-style: none
+                        line-height: 16px
+                        color: #c3c3c3
+                    a
+                        color: black
+                        text-decoration: none
+                        line-height: 16px
+                        li
+                            padding: 10px 20px
+                            list-style: none
+                            &:hover
+                                transition: all 300ms ease-in-out
+                                background-color: $primary-color 
+                                color: white
+        .header-menu-container
+            a
+                display: inline-block
+                text-decoration: none
+                letter-spacing: 1px
+                color: #5e5f61                
+                padding: 15px
+                font-family: $rotis-semibold-font
+                font-weight: 400
+                &:hover p, &.active p
+                    border-bottom: 3px solid $primary-color 
+                p
+                    margin: 0
+                    padding-bottom: 2px
+                    border-bottom: 3px solid transparent
+.container
+    padding-left: 15px
+    padding-right: 15px
+    width: 1200px
+    max-width: 1200px
+    margin: auto
+
+.banner
+    position: relative
+    background-color: $primary-color
+    color: $white
+    height: 240px
+    .container
+        display: flex
+        align-items: center
+        height: 100%
+        .breadcrumbs a
+            font-family: 'Arial'
+            color: #81e0e3
+            text-decoration: none
+        .breadcrumbs span::after
+            content: ">";
+            font-size: 14px
+            padding: 0 15px
+        .banner-title
+            text-transform: capitalize
+            margin-top: 20px
+            font-size: 40px
+            font-family: $rotis-semibold-font
+        img
+            position: absolute
+            right: 0
+            top: 0
+            height: 240px
